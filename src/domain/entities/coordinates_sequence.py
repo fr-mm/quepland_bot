@@ -12,6 +12,10 @@ class CoordinatesSequence:
         self.__coordinates = []
         self.reset_to_first_coordinates()
 
+    @property
+    def length(self) -> int:
+        return len(self.__coordinates)
+
     def add_coordinates(self, coordinates: Coordinates) -> None:
         self.__coordinates.append(coordinates)
 
