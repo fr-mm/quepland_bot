@@ -13,6 +13,7 @@ class ClickOnCoordinatesSequenceUseCase:
         self.__seconds_between_clicks = seconds_between_clicks
 
     def execute(self, coordinates_sequence: CoordinatesSequence, loop_forever: bool = False) -> None:
+        print(f'Reproducing saved clicks ')
         if loop_forever:
             self.__loop_forever(coordinates_sequence)
         else:
