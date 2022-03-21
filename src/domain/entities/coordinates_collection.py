@@ -29,7 +29,7 @@ class CoordinatesCollection:
         self.__counter = 0
 
     def __increment_counter(self) -> None:
-        if self.__counter < len(self.__coordinates):
+        if self.__counter < len(self.__coordinates) - 1:
             self.__counter += 1
         else:
             self.reset_to_first_coordinates()
