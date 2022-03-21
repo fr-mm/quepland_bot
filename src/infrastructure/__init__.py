@@ -1,0 +1,1 @@
+from src.infrastructure.adapters.pyautogui_mouse import PyautoguiMouse
