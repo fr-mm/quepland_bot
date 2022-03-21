@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from src.value_objects import Coordinates
+from src.domain.value_objects import Coordinates
 
 
 class MousePort(ABC):

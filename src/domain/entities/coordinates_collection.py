@@ -1,6 +1,6 @@
 from typing import List
 
-from src.value_objects import Coordinates
+from src.domain.value_objects import Coordinates
 
 
 class CoordinatesCollection:

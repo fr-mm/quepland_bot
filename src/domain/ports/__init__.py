@@ -1,1 +1,1 @@
-from src.ports.mouse_port import MousePort
+from src.domain.ports.mouse_port import MousePort

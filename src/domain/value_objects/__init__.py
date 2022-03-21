@@ -1,1 +1,1 @@
-from src.value_objects.coordinates import Coordinates
+from src.domain.value_objects.coordinates import Coordinates
