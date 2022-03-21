@@ -13,6 +13,10 @@ class CoordinatesSequence:
         self.reset_to_first_coordinates()
 
     @property
+    def is_empty(self) -> bool:
+        return len(self.__coordinates) == 0
+
+    @property
     def length(self) -> int:
         return len(self.__coordinates)
 
