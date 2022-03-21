@@ -4,7 +4,7 @@ from src.domain.exceptions import CoordinatesCollectionEmptyException
 from src.domain.value_objects import Coordinates
 
 
-class CoordinatesCollection:
+class CoordinatesSequence:
     __coordinates: List[Coordinates]
     __counter: int
 

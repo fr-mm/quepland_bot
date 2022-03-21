@@ -1,1 +1,1 @@
-from src.domain.entities.coordinates_collection import CoordinatesCollection
+from src.domain.entities.coordinates_sequence import CoordinatesSequence
