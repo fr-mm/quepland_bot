@@ -1,5 +1,6 @@
 from typing import List
 
+from src.domain.exceptions import CoordinatesCollectionEmptyException
 from src.domain.value_objects import Coordinates
 
 
@@ -16,9 +17,19 @@ class CoordinatesCollection:
 
     @property
     def next_coordinates(self) -> Coordinates:
-        coordinates = self.__coordinates[self.__counter]
-        self.__counter += 1
-        return coordinates
+        try:
+            coordinates = self.__coordinates[self.__counter]
+            self.__increment_counter()
+            return coordinates
+
+        except IndexError:
+            raise CoordinatesCollectionEmptyException()
 
     def reset_to_first_coordinates(self) -> None:
         self.__counter = 0
+
+    def __increment_counter(self) -> None:
+        if self.__counter < len(self.__coordinates):
+            self.__counter += 1
+        else:
+            self.reset_to_first_coordinates()
