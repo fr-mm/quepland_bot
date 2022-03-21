@@ -1,1 +1,1 @@
-from src.infrastructure.adapters.pyautogui_mouse import PyautoguiMouse
+from src.infrastructure.adapters.pyautogui_mouse_adapter import PyautoguiMouseAdapter
