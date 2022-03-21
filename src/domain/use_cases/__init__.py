@@ -1,0 +1,1 @@
+from src.domain.use_cases.click_on_coordinates_sequence_use_case import ClickOnCoordinatesSequenceUseCase
