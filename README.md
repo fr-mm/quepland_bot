@@ -1,4 +1,4 @@
-A simple library for mouse automations.
+A simple library for recording and playing mouse macros at regular intervals between clicks.
 
 # Compatibility
 
