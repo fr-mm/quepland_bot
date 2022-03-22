@@ -10,7 +10,7 @@ class RecordClicksUseCase:
         self.__click_recorder = click_recorder
 
     def execute(self) -> CoordinatesSequence:
-        print(f'Press {CommandKeyEnum.START_RECORDING_CLICKS.value} to start recording')
+        print(f'Press {CommandKeyEnum.START_RECORDING_CLICKS.value.value} to start recording')
         self.__click_recorder.wait_until_start_recording_trigger_key_is_pressed()
         print('Recording clicks, press any key to stop')
         coordinates_sequence = self.__click_recorder.record_until_any_key_is_pressed()
