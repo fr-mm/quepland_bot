@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "quepland_bot"
 version = "0.1.0"
-description = ""
-authors = ["Francisco Mascar"]
+description = "Simple library to record and play mouse macros at regular intervals between clicks."
+authors = ["Francisco Mascarenhas"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
