@@ -3,6 +3,19 @@ name = "quepland_bot"
 version = "0.1.0"
 description = "Simple library to record and play mouse macros at regular intervals between clicks."
 authors = ["Francisco Mascarenhas"]
+license = "GPL3"
+readme = "README.md"
+repository = "https://github.com/francisco-mascarenhas/quepland_bot"
+keywords = ["mouse", "macro", "automation", "record"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Operating System :: Linux",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3"
+]
+include = [
+    "LICENSE"
+]
 
 [tool.poetry.dependencies]
 python = "^3.7"
