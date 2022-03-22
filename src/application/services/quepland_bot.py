@@ -1,14 +1,15 @@
 from src.application.exceptions import CoordinatesSequenceNotFoundException
 from src.domain.entities import CoordinatesSequence
-from src.domain.ports import MousePort, ClickRecorderPort
+from src.domain.ports import MousePort, ClickRecorderPort, MouseLoopBreakerPort
 from src.domain.use_cases import ClickOnCoordinatesSequenceUseCase, RecordClicksUseCase
-from src.infrastructure import PyautoguiMouseAdapter
+from src.infrastructure import PyautoguiMouseAdapter, PynputMouseLoopBreakerAdapter
 from src.infrastructure.adapters import PynputClickRecorderAdapter
 
 
 class QueplandBot:
     __mouse_class: type(MousePort)
     __click_recorder_class: type(ClickRecorderPort)
+    __mouse_loop_breaker_class: type(MouseLoopBreakerPort)
     __recorded_coordinates_sequence: CoordinatesSequence
     __seconds_between_clicks: float
 
@@ -16,6 +17,7 @@ class QueplandBot:
         self.__seconds_between_clicks = 0.2
         self.__mouse_class = PyautoguiMouseAdapter
         self.__click_recorder_class = PynputClickRecorderAdapter
+        self.__mouse_loop_breaker_class = PynputMouseLoopBreakerAdapter
         self.__recorded_coordinates_sequence = CoordinatesSequence()
 
     def record_clicks(self) -> CoordinatesSequence:
@@ -31,6 +33,9 @@ class QueplandBot:
             mouse=mouse,
             seconds_between_clicks=self.__seconds_between_clicks
         )
+        break_loop_callback = click_on_coordinates_sequence_service.loop_break_callback
+        mouse_loop_breaker = self.__mouse_loop_breaker_class(break_loop_callback=break_loop_callback)
+        mouse_loop_breaker.break_when_any_key_is_pressed()
         click_on_coordinates_sequence_service.execute(coordinates_sequence=coordinates_sequence, loop_forever=False)
 
     def __get_valid_coordinates_sequence(self, coordinates_sequence: CoordinatesSequence or None) -> CoordinatesSequence:

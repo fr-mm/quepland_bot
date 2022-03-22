@@ -13,9 +13,11 @@ class PynputMouseLoopBreakerAdapter(MouseLoopBreakerPort):
 
     def break_when_any_key_is_pressed(self) -> None:
         self.__keyboard_listener = keyboard.Listener(
-            on_press=lambda key: self.__keyboard_listener.stop()
+            on_press=lambda key: self.__break_loop()
         )
+        self.__keyboard_listener.start()
 
     def __break_loop(self) -> None:
         self.__keyboard_listener.stop()
         self.__break_loop_callback()
+        print(f'Loop interrupted')
