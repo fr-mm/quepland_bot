@@ -1,0 +1,1 @@
+from quepland_bot.quepland_bot import QueplandBot

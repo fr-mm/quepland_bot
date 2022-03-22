@@ -2,8 +2,8 @@ from unittest import TestCase
 
 from mockito import mock, verify, unstub
 
-from src.domain.use_cases import ClickOnCoordinatesSequenceUseCase
-from src.domain.value_objects import Coordinates
+from quepland_bot.domain.use_cases import ClickOnCoordinatesSequenceUseCase
+from quepland_bot.domain.value_objects import Coordinates
 
 
 class TestClickOnCoordinatesSequenceUseCase(TestCase):

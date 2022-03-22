@@ -1,2 +1,0 @@
-from src.infrastructure.adapters.pyautogui_mouse_adapter import PyautoguiMouseAdapter
-from src.infrastructure.adapters.pynput_click_recorder.pynput_click_recorder_adapter import PynputClickRecorderAdapter

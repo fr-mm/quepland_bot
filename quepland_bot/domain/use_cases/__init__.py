@@ -1,0 +1,2 @@
+from quepland_bot.domain.use_cases.click_on_coordinates_sequence_use_case import ClickOnCoordinatesSequenceUseCase
+from quepland_bot.domain.use_cases.record_clicks_use_case import RecordClicksUseCase

@@ -1,8 +1,8 @@
 from unittest import TestCase
 
-from src.domain.entities import CoordinatesSequence
-from src.domain.exceptions import CoordinatesCollectionEmptyException
-from src.domain.value_objects import Coordinates
+from quepland_bot.domain.entities import CoordinatesSequence
+from quepland_bot.domain.exceptions import CoordinatesCollectionEmptyException
+from quepland_bot.domain.value_objects import Coordinates
 
 
 class TestCoordinatesCollection(TestCase):
