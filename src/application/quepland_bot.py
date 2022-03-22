@@ -7,14 +7,17 @@ from src.infrastructure.adapters import PynputClickRecorderAdapter
 
 
 class QueplandBot:
+    __default_seconds_between_clicks: float
     __mouse_class: type(MousePort)
     __click_recorder_class: type(ClickRecorderPort)
     __mouse_loop_breaker_class: type(MouseLoopBreakerPort)
     __recorded_coordinates_sequence: CoordinatesSequence
-    __seconds_between_clicks: float
 
-    def __init__(self) -> None:
-        self.__seconds_between_clicks = 0.2
+    def __init__(
+            self,
+            default_seconds_between_clicks=0.1
+    ) -> None:
+        self.__default_seconds_between_clicks = default_seconds_between_clicks
         self.__mouse_class = PyautoguiMouseAdapter
         self.__click_recorder_class = PynputClickRecorderAdapter
         self.__mouse_loop_breaker_class = PynputMouseLoopBreakerAdapter
@@ -31,7 +34,7 @@ class QueplandBot:
         mouse = PyautoguiMouseAdapter()
         click_on_coordinates_sequence_service = ClickOnCoordinatesSequenceUseCase(
             mouse=mouse,
-            seconds_between_clicks=self.__seconds_between_clicks
+            seconds_between_clicks=self.__default_seconds_between_clicks
         )
         break_loop_callback = click_on_coordinates_sequence_service.loop_break_callback
         mouse_loop_breaker = self.__mouse_loop_breaker_class(break_loop_callback=break_loop_callback)
