@@ -36,7 +36,7 @@ class QueplandBot:
         break_loop_callback = click_on_coordinates_sequence_service.loop_break_callback
         mouse_loop_breaker = self.__mouse_loop_breaker_class(break_loop_callback=break_loop_callback)
         mouse_loop_breaker.break_when_any_key_is_pressed()
-        click_on_coordinates_sequence_service.execute(coordinates_sequence=coordinates_sequence, loop_forever=False)
+        click_on_coordinates_sequence_service.execute(coordinates_sequence=coordinates_sequence, loop_forever=True)
 
     def __get_valid_coordinates_sequence(self, coordinates_sequence: CoordinatesSequence or None) -> CoordinatesSequence:
         if coordinates_sequence:
