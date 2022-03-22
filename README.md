@@ -4,8 +4,6 @@ A simple library for recording and playing mouse macros at regular intervals bet
 
 Built and tested on Ubuntu 21.04. 
 
-Probably works with other distributions as well as Windows and Mac.
-
 # Installation
 
 ```

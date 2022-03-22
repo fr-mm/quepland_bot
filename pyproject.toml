@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "quepland_bot"
-version = "0.1.5"
+version = "0.1.6"
 description = "Simple library to record and play mouse macros at regular intervals between clicks."
 authors = ["Francisco Mascarenhas"]
 license = "GPL3"
