@@ -19,18 +19,18 @@ Import and instantiate QueplandBot
 from quepland_bot import QueplandBot
 
 
-quepland_bot = QueplandBot()
+bot = QueplandBot()
 ```
 
 Record clicks: once the method is called, it will wait for a space bar press to begin recording.
 Press any kay to stop recording.
 ```
-quepland_bot.record_clicks()
+bot.record_clicks()
 ```
 
 Play what you recorded until any key is pressed:
 ```
-quepland_bot.run()
+bot.run()
 ```
 
 
@@ -40,7 +40,7 @@ When instantiating QueplandBot you can define how many seconds it will take betw
 Default is 0.1 seconds.
 
 ```
-quepland_bot = Queplandbot(default_seconds_between_clicks=0.5)
+bot = Queplandbot(default_seconds_between_clicks=0.5)
 ```
 
 ## Saving routines
@@ -51,13 +51,11 @@ When `run()` is called without arguments it runs last routine recorded.
 
 ```
 
-quepland_bot = QueplandBot()
+bot = QueplandBot()
 
-one_routine = quepland_bot.record_clicks()
-other_routine = quepland_bot.record_clicks()
+one_routine = bot.record_clicks()
+other_routine = bot.record_clicks()
 
-quepland_bot.run(one_routine)
+bot.run(one_routine)
 
 ```
-
-

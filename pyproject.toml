@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "quepland_bot"
-version = "0.1.01"
+version = "0.1.5"
 description = "Simple library to record and play mouse macros at regular intervals between clicks."
 authors = ["Francisco Mascarenhas"]
 license = "GPL3"
@@ -23,7 +23,7 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.7"
 PyAutoGUI = "^0.9.53"
-pynput = "1.7.6"
+pynput = "^1.7.6"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.1"
