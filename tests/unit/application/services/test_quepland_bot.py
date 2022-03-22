@@ -2,7 +2,7 @@ from unittest import TestCase
 
 from mockito import unstub, when, verify
 
-from src.application.services import QueplandBot
+from src.application import QueplandBot
 from src.domain.entities import CoordinatesSequence
 from src.domain.use_cases import ClickOnCoordinatesSequenceUseCase
 from src.domain.value_objects import Coordinates
